@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced Functions</title>
+    <style></style>
+  </head>
+
+  <body>
+    <button onclick="" class="js-button">click</button>
+    <script>
+      const buttonElement = document.querySelector(".js-button");
+
+      // .addEventListener lets us run some code when we interact with the element.(the first value is Event(after on is event: on'click') and the second value is the acting that we want to do like a function.)
+      //because of a function passing into another function, we used arrow function.
+
+      // the below code does the same thing as the onclick. but the below code lets us add multiple event listeners for an event.
+
+      const eventListener = () => {
+        console.log("click2");
+      };
+
+      buttonElement.addEventListener("click", eventListener);
+      // another advantage of doing this is that we can remove an event listener.
+
+      buttonElement.removeEventListener("click", eventListener);
+
+      buttonElement.addEventListener("click", eventListener);
+
+      /*
+      function greeting() {
+        console.log("hello");
+      }
+      greeting();
+
+      //anonymous function: the function without a name.
+      const function1 = function () {
+        console.log("hello2");
+      };
+
+      console.log(function1);
+      console.log(typeof function1);
+      function1();
+
+      const object1 = {
+        num: 2,
+        fun: function () {
+          console.log("hello3");
+        },
+      };
+      object1.fun();
+
+      // passing a value into a function and because function is a value , so we can also pass a function into a function.
+      function display(param) {
+        console.log(param);
+      }
+      display(2);
+
+      function run(param) {
+        param();
+      }
+      run(function () {
+        console.log("hello4");
+      });
+      // the function that we're passing in, called a callback function.
+      */
+
+      /*
+
+      setTimeout(function () {
+        console.log("timeout");
+        console.log("timeout2");
+      }, 3000);
+      console.log("next line");
+
+      setInterval(function () {
+        console.log("interval");
+      }, 3000);
+
+      console.log("next line 2");
+      */
+
+      /*
+
+      ["make dinner", "wash dishes", "watch youtube"].forEach(function (
+        value,
+        index
+      ) {
+        // if value is wash dishes we are going to skip it.
+        if (value === "wash dishes") {
+          return;
+        }
+        console.log(index);
+        console.log(value);
+      });
+
+      // .forEach() is the prefrred way to loop through an array.
+
+      // arrow function: mostly works the same as a regular function. and arrow function has some shortcuts.
+
+      const regularFunction = function (param, param2) {
+        console.log("hello");
+        return 5;
+      };
+      regularFunction();
+
+      const arrowFunction = (param, param2) => {
+        console.log("hello");
+        return 5;
+      };
+      arrowFunction();
+
+      // one of the shortcut in the arrow function is that the bracket in the one parameter functions is optional.
+
+      const oneParam = (param) => {
+        console.log(param + 1);
+      };
+      oneParam(2);
+
+      // another shortcut is optional curly bracket in the one line functions (return 2+3 === 2+3 in this case).
+
+      const oneLine = () => 2 + 3;
+      console.log(oneLine());
+
+      // NOTE: when we're passing a function into another function, it's recommended to use arrow functions, because it makes our code easier to read.
+
+      ["make dinner", "wash dishes", "watch youtube"].forEach(
+        (value, index) => {
+          if (value === "wash dishes") {
+            return;
+          }
+          console.log(index);
+          console.log(value);
+        }
+      );
+      */
+    </script>
+  </body>
+</html>

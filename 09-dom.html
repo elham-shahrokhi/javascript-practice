@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM</title>
+  </head>
+  <button>hello</button>
+  <button class="js-button">second button</button>
+
+  <body>
+    <script>
+      //every HTML elements has a property .innerHTML , which lets us control the HTML inside the element.
+      console.log(document.querySelector("button"));
+      console.log(document.querySelector("button").innerHTML);
+
+      document.querySelector("button").innerHTML = "chenged";
+
+      //HTML elements are JavaScript objects,so the second button is also just an object and remember objects are values and we can save them inside a variable.
+
+      const buttonElement = document.querySelector(".js-button");
+      console.log(buttonElement);
+
+      /*
+      console.log(document.title);
+      document.title = "changed";
+      //with below code, we can have HTML elements inside JavaScript .
+      // the DOM combines JavaScript and HTML together. and it gives JavaScript control of the webpage.
+
+      //actually when we have HTML in JavaScript, the HTML element is converted into a JavaScript object.
+
+      console.log(document.body);
+      console.log(typeof document.body);
+
+      //document.body lets us get any element from the page and put it inside our JavaScript.
+
+      console.log(document.body.innerHTML);
+      document.body.innerHTML = "<button>Good job!</button>";
+
+      // document.querySelector: lets us get any element from the page and put it inside JavaScript.
+
+      //review: Method = function saved inside an object.
+
+
+      //DOM: Document Object Model
+      document.body.innerHTML = "hello";
+      document.title = "Good job!";
+      //the document object represents/models the webpage.
+      */
+    </script>
+  </body>
+</html>

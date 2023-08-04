@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Functions</title>
+  </head>
+  <body>
+    <script>
+      // a function lets us reuse code.
+      // functions make our code easier to update.
+      // return statment lets us get a value out of a function.
+
+      function function1() {
+        console.log("hello");
+        console.log(2 + 2);
+      }
+
+      function1();
+
+      //'return' gets a value out of a function.
+      //'parameter' puts a value into a function.
+
+      //below example: describe a function to calculate tax.
+
+      function calculateTax(cost, taxPercent = 0.1) {
+        console.log(cost * taxPercent);
+      }
+      calculateTax(2000, 0.2);
+      calculateTax(50000);
+
+      //a parameter lets us put values into a function and this allows our function to work with any value.
+    </script>
+  </body>
+</html>

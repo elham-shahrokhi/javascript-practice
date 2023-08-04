@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+  </head>
+  <body>
+    <script>
+      //object groups multiple values together and let us use multiple values together.
+      //why we use objects? objects make our code organized.
+      /*
+            const product = {
+              name: "socks",
+              price: 1090,
+            };
+            console.log(product);
+            console.log(product.name);
+            console.log(product.price);
+
+            product.name = "cotton socks";
+            console.log(product);
+
+            product.newProperty = true;
+            console.log(product);
+
+            delete product.newProperty;
+            console.log(product);
+
+            //notice that an object is just another type of value.
+            console.log(typeof product);
+
+
+
+            const product2 = {
+              name: "shirt",
+              // a nested object is like below (nested object is an object inside an object)
+              "delivery-time": "1 day",
+
+              rating: {
+                star: 4.5,
+                count: 87,
+              },
+
+              //function inside object = method
+
+              fun: function function1() {
+                console.log("function inside object");
+              },
+
+              /*
+              func: function function2(input) {
+                if (input >= 1000) {
+                  return input;
+                }
+                input = input * 2;
+                return function2(input);
+              },
+
+            };
+            console.log(product2);
+            // dot.notation is like below:
+            console.log(product2.name);
+            //another way to access bracket notation that use  square brackets like below:
+            console.log(product2["name"]);
+
+            // bracket notation lets us use properties that don't work with dot notation.
+
+            console.log(product2["delivery-time"]);
+            console.log(product2.rating.star);
+            console.log(product2.rating.count);
+            //console.log(product2.func(2));
+
+            product2.fun();
+
+            console.log(typeof console);
+            console.log(typeof console.log);
+
+            // console is an object and console.log is a function. so log is a function that is saved inside the console.
+
+            //object + function = method
+
+            //convert JavaScript to JSON
+            console.log(JSON.stringify(product2));
+            console.log(typeof JSON.stringify(product2));
+
+            //convert JSON to JavaScript
+            const jsonstring = JSON.stringify(product2);
+            console.log(JSON.parse(jsonstring));
+
+            // a JavaScript object only makes sense in JavaScript but Jason syntax can be understood by almost every programming languge.
+            // so Jason syntax is more universal.
+            */
+
+      console.log("hello".length);
+      //Auto-boxing
+      console.log("hello".toUpperCase());
+
+      //copy by refrence
+      const object1 = {
+        message: "hello",
+      };
+      const object2 = object1;
+      object1.message = "Good job!";
+      console.log(object1);
+      console.log(object2);
+
+      //we can't compare objects directly
+
+      const object3 = {
+        message: "Good job!",
+      };
+
+      //the below code compares the refrences and not the values inside the objects.
+      console.log(object3 === object1);
+      console.log(object2 === object1);
+
+      //Distructuring: easier way to take properties out of an object.
+      const object4 = {
+        message: "Good job!",
+        price: 799,
+      };
+      //const message = object4.message;
+      const { message, price } = object4;
+      console.log(message);
+      console.log(price);
+
+      //shorthand property
+      const object5 = {
+        // message: message,
+        message,
+        /*
+        method: function function1() {
+          console.log("method");
+        },
+        */
+
+        method() {
+          console.log("method");
+        },
+      };
+
+      console.log(object5);
+      object5.method();
+    </script>
+  </body>
+</html>
